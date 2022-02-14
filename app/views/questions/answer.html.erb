@@ -1,0 +1,11 @@
+
+   <% if @question == 'I am going to work' %>
+      <p class="container-question"><%= @question %> <br>-You</p>
+      <p class="container-answer"><%= 'Great' %> <br>-Your Coach</p>
+   <% elsif @question.include?('?') %>
+      <p><%= @question %> <br>-You</p>
+      <p><%= 'Silly question, get dressed and go to work!' %> <br>-Your Coach</p>
+   <% else %>
+      <p><%= @question %> <br>-You</p>
+      <p><%= "I don't care, get dressed and go to work!" %> <br>-Your Coach</p>
+   <% end %>
